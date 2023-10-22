@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #546;
+
+}
+
+
+.menu {
+    position: fixed;
+    bottom: 20px;
+    background-color: #aaa;
+    padding-left: 11vh;
+    padding-right: 11vh;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border: 5px solid;
+    border-color:#bcd;
+    border-radius: 6px;
+}
+
+.menu_grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 190px;
+    margin-top: 20px;
+}
+
+
+.menu_btn{
+    color: #822;
+    background-color: #bcd;
+    border: 1px solid #89a;
+    border-radius: 4px;
+    padding: 20px 10px;
+    font-size: 32px;
+}
+
+.menu_btn:hover {
+    background-color: #9ab;
+}
+
+
+.tbox {
+    display:grid;
+    color: #822;
+    background-color: #bcd;
+    border: 1px solid #89a;
+    border-radius: 4px;
+    padding: 20px 10px;
+    font-size: 32px;
+    grid-template-columns: repeat(1, auto);
+}
+
+/*The viewport cuts into the menu buttons area, if enough scenes are in the page FYI*/
+.viewport {
+    
+}
+
+.new_tbox_form {
+    display:none;
+    background-color: #673;
+    padding: 30px;
+    border-radius: 6px;
+    border-style:solid;
+    border-width:3px;
+    border-color: #413;
+    position:fixed;
+}
+
+.dataTable{
+    background-color: #693;
+    
+}
+
+table, td, tr {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .edit_tbox_form{
+    display:none;
+    background-color: #943;
+    position:fixed;
+  }

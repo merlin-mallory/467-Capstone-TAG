@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="game.js"></script>
+    <title>TA Game</title>
+</head>
+<body>
+    <div class="viewport" id="viewport">
+        <!-- Here is where the Scenes populate, each scene gets its own button in a row in dataTable, clicking the scene allows users to edit them -->
+        <table id="dataTable">
+            <thread>
+                
+            </thread>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <br><br>
+    <!-- One of the two main forms. This form is used for making a new scene. It does not display until "New Text Box" button is clicked & does not disapear until "submit" is clicked -->
+    <!-- TODO: Create an exit button in the corner to cancel out of making a new scene -->
+    <div class="new_tbox_form" id="new_tbox_form">
+        <form id="new_tbox">Scene Name: <input id='tbox_name' type='text' name='name'></input> ID: <input type="number" id="tbox_id" value="0", min="0"></input><br>
+                            Text: <br><textarea id="tbox_text" rows="4" cols="50"></textarea> <br> 
+                            
+                            <!-- Prompts/connections are dynamically populated by the user. Up to 10 prompt/connections are allowed and will populate here when "prompt_btn" is clicked -->
+                            <!-- TODO: Make prompt/connections populate in a cleaner fashion, probably by including a <br> in between each prompt/connection pair -->
+                            <!-- TODO: Delete button for propmt/connections -->
+                            <div id="prompt_container">Prompt 1: <input id="tbox_prompt" type="text"></input> 
+                            Connection 1: <input id="tbox_connection" type="number" min="0"></input></div> <br> <button type="button" class="prompt_btn", id="prompt_btn">Add Prompt</button>
+        <br>
+    <!-- Submitting new_tbox form creates a new scene in the viewport's dataTable-->
+    <input type="submit" value="Submit"></form>
+    </div> 
+
+    <!-- The second of the two main forms. This form is used for editing a created scene. It does not display until the scene button is clicked in the viewport & does not disapear until "submit" is clicked -->
+    <!-- TODO: Create an exit button in the corner to cancel out of editing a scene -->
+    <div class="edit_tbox_form" id="edit_tbox_form">
+        <form id="edit_tbox">Scene Name: <input id='edit_name' type='text' ></input> ID: <input type="number" id="edit_id", min="0"></input><br>
+                            Text: <br><textarea id="edit_text" rows="4" cols="50"></textarea> <br>
+                            <!-- Same notes as for the prompt_container in new_tbox_form --> 
+                            <div id="edit_prompt_container"></div> <br> <button type="button" class="prompt_btn_edit", id="prompt_btn_edit">Add Prompt</button>
+
+        <br>
+    <input type="submit" value="Submit"></form>
+    </div> 
+    <!-- Here we have the main menu buttons. For now only "New Text Box" does anything. I have the position for this menu "fixed" so user can always create new Tboxes or delete, etc. -->
+    <!-- TODO: Implement "Delete Text Box" button -->
+    <!-- TODO: Implement "Play Game" button for Game Creators to test their game so far -->
+    <div class="menu">
+        <div id="menu_buttons" class="menu_grid">
+            <button class="menu_btn", id="new_text">New Text Box</button>
+            <button class="menu_btn", id="delete_text">Delete Text Box</button>
+        </div>
+    </div>
+</body>
+</html>
