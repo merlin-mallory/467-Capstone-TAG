@@ -64,7 +64,8 @@ body {
 
 /*The viewport cuts into the menu buttons area, if enough scenes are in the page FYI*/
 .viewport {
-    
+    position: absolute;
+    left: 125px;
 }
 
 .new_tbox_form {
@@ -79,6 +80,7 @@ body {
 }
 
 .dataTable{
+    
     background-color: #693;
     
 }
@@ -92,5 +94,10 @@ table, td, tr {
   .edit_tbox_form{
     display:none;
     background-color: #943;
+    border-color: #142;
     position:fixed;
+    padding: 30px;
+    border-radius: 6px;
+    border-style:solid;
+    border-width:3px;
   }
