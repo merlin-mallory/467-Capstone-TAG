@@ -14,14 +14,14 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Protected from './components/Protected';
 import LoginHome from './pages/LoginHome';
-import MakeGames from './pages/MakeGames';
+import MakeGames from './pages/static/MakeGamesStatic';
 import CreateNewGame from './pages/CreateNewGame';
 import GameEdit682 from './pages/GameEdit682';
 import GameEditNew from './pages/GameEditNew';
 import Scroll from './pages/Scroll';
 import PlayDetails from './pages/PlayDetails';
 import PlayGame from './pages/PlayGame';
-import UsersGamesPage from './pages/UsersGamesPage';
+import UsersGamesPage from './pages/MakeGames';
 import PublishedGamesPage from './pages/PublishedGamesPage';
 
 // The original static version of MakeGames.js has been commented out below and replaced with the dynamic version.

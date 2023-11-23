@@ -48,6 +48,27 @@ DELETE http://localhost:8000/games/6539c0a7877824c759550494
 GET http://localhost:8000/games
 
 
-
 ### Get all games for a specific user
 GET http://localhost:8000/games?author_id=crx8rfOzxPa17CXDUpdZaJKg3B43
+
+### currentMaxGameId Tests
+
+### Get the current max game ID. Write this down because you will need to cheange it back later.
+GET http://localhost:8000/games/currentMaxGameId
+
+### Modify the current max game ID to be 9999 (should be success)
+PATCH http://localhost:8000/games/currentMaxGameId
+Content-Type: application/json
+    
+    {
+        "currentMaxGameId": 9999
+    }
+
+### Reset the currentMasGameId to the state it was before testing (which you wrote down earlier).
+### If you forgot it, then check the DB Atlas manually for the max number.
+PATCH http://localhost:8000/games/currentMaxGameId
+Content-Type: application/json
+    
+    {
+        "currentMaxGameId": 8
+    }

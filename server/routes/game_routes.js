@@ -3,6 +3,10 @@ import * as games from '../controllers/game_controller.js';
 
 const router = express.Router();
 
+router.route('/currentMaxGameId')
+    .get(games.getCurrentMaxGameId)
+    .patch(games.updateCurrentMaxGameId);
+
 router.route('/published')
     .get(games.getAllPublishedGames, games.findGames)
 
