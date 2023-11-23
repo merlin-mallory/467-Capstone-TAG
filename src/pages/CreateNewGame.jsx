@@ -13,39 +13,87 @@ function CreateNewGame() {
     setNewGameIsPublished(!newGameIsPublished);
   }
 
+  const allocateGameId = async () => {
+    try {
+      // Get the current max game ID
+      const currentIdResponse = await fetch('http://localhost:8000/games/currentMaxGameId');
+      if (!currentIdResponse.ok) {
+        throw new Error('Failed to fetch currentMaxGameId');
+      }
+      const currentIdData = await currentIdResponse.json();
+      // console.log("currentIdData.currentMaxGameId:", currentIdData.currentMaxGameId);
+      let currentMaxGameId = currentIdData.currentMaxGameId;
+  
+      // Increment the current max game ID
+      currentMaxGameId += 1;
+      // console.log("Heres the currentMaxGameId:", currentMaxGameId);
+  
+      // Update the current max game ID
+      const patchResponse = await fetch('http://localhost:8000/games/currentMaxGameId', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ currentMaxGameId }),
+      });
+
+      if (!patchResponse.ok) {
+        throw new Error('Failed to patch currentMaxGameId');
+      }
+  
+      const updatedIdData = await patchResponse.json();
+      // console.log("updatedIdData.currentMaxGameId:", updatedIdData.currentMaxGameId);
+      return updatedIdData.currentMaxGameId;
+
+    } catch (error) {
+        console.error("Error in allocating game ID:", error);
+      return null;
+    }
+  };
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
+  
+    if (!user) {
+      alert('You must be logged in to create a new game.');
+      return;
+    }
+  
+    // Allocate a new game ID
+    const newGameId = await allocateGameId();
+    if (newGameId === null) {
+      alert('Failed to allocate a new game ID.');
+      return;
+    }
+  
     const newGame = {
       title: newGameName,
       description: newGameDescription,
       author_id: user.uid,
       author_name: user.email,
       is_published: newGameIsPublished,
+      game_id: newGameId
     };
-
-    if (!user) {
-      alert('You must be logged in to create a new game.');
-      return;
-    }
-
-    const response = await fetch('/games', {
+  
+    // Making the POST request to create a new game
+    const response = await fetch('http://localhost:8000/games', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(newGame),
     });
-
+  
     if (response.status === 201) {
       alert('Game created successfully!');
       const data = await response.json();
-      //Not implemented yet
-      //navigate(`/game-edit-new/${data._id}`);
-    }
-    else {
+      // Redirect to the game edit page or wherever needed
+      navigate(`/make-games`); // Uncomment and modify as needed
+    } else {
       alert(`Failed to create game. Status code = ${response.status}`);
     }
-  }
+  };
+  
 
 
   return (

@@ -65,8 +65,16 @@ const gameSchema = new Schema({
         }
 
     },
+    game_id: {
+        type: Number,
+        required: true,
+        unique: true
+    },
 });
 
 const Game = model('Game', gameSchema);
+
+// Create the index for the game_id field
+Game.createIndexes()
 
 export default Game;
