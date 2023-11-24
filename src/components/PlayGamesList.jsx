@@ -20,7 +20,7 @@ function PlayGamesList({setGameToPlay }) {
     //Not working yet - a dynamic version of that page must be implemented first
     const onPlay = async (_id) => {
         setGameToPlay(_id);
-        navigate('/play-game');
+        navigate('/play-details');
     }
 
     return (

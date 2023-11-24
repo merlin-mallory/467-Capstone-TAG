@@ -5,7 +5,7 @@ function PlayGamesRow({game, onPlay}) {
   return (
     <tr>
       <td><FaPlay onClick={() => onPlay(game)} /></td>
-      <td>{game.title}</td>
+      <td>{game.title} (#{game.game_id})</td>
       <td>{game.created_at.substr(0,9)}</td>
       <td>{game.updated_at.substr(0,9)}</td>
     </tr>

@@ -18,11 +18,9 @@ import MakeGames from './pages/MakeGames';
 import CreateNewGame from './pages/CreateNewGame';
 import GameEdit682 from './pages/GameEdit682';
 import GameEditNew from './pages/GameEditNew';
-import Scroll from './pages/Scroll';
 import PlayDetails from './pages/PlayDetails';
 import PlayGame from './pages/PlayGame';
 import UsersGamesPage from './pages/UsersGamesPage';
-import PublishedGamesPage from './pages/PublishedGamesPage';
 import GameEdit from './pages/GameEdit';
 
 // The original static version of MakeGames.js has been commented out below and replaced with the dynamic version.
@@ -40,7 +38,6 @@ const router = createBrowserRouter(
       <Route path="game-edit602" element={<GameEdit682 />} />
       <Route path="game-edit-new" element={<GameEditNew />} />
       <Route path="edit-game/:gameId" element={<GameEdit />} />
-      <Route path="scroll" element={<PublishedGamesPage />} /*element={<Scroll />} */ />
       <Route path="play-details" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
       {/* <Route path="/" element={<Home />} > */}
