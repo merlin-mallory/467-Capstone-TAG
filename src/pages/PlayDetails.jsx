@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import QRCode from 'qrcode.react';
 
 const PlayDetails = () => {
   const { gameId } = useParams(); // Extract gameId from URL
@@ -34,6 +35,9 @@ const PlayDetails = () => {
     alert("Not implemented yet...")
   }
 
+  // This gets the URL for the QR code
+  const playDetailsUrl = `${window.location.origin}/games/details/${gameId}`
+
   return (
     <div>
       <div className="details-stats">
@@ -65,6 +69,13 @@ const PlayDetails = () => {
         <button><Link to="/make-games">Back to Make Games</Link></button>
         <button><Link to="/play-games">Back to Play Games</Link></button>  
         <button onClick={handlePlayThisGameClick}>Play This Game</button>
+      </div>
+
+      <br />
+
+      <div className="qr-code">
+        <h2>Scan to Play</h2>
+        <QRCode value={playDetailsUrl} size={256} />
       </div>
     </div>
   );

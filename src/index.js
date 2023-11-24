@@ -12,7 +12,6 @@ import {
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Protected from './components/Protected';
 import LoginHome from './pages/LoginHome';
 import CreateNewGame from './pages/CreateNewGame';
 import GameEdit682 from './pages/GameEdit682';
