@@ -8,11 +8,14 @@ router.route('/currentMaxGameId')
     .patch(games.updateCurrentMaxGameId);
 
 router.route('/published')
-    .get(games.getAllPublishedGames, games.findGames)
+    .get(games.getAllPublishedGames, games.findGames);
 
 router.route('/')
     .post(games.createGame)
     .get(games.findGames);
+
+// New route for fetching game details for play games.
+router.get('/details/:gameId', games.findGameDetails);
 
 router.route('/:id')
     .get(games.findGameById)

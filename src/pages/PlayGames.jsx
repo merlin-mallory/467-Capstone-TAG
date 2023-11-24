@@ -8,8 +8,8 @@ function PlayGames() {
   const [gameToPlay, setGameToPlay] = useState(null);
 
   return (
-    <div className="publishedgames-container">
-      <h1>Published Games</h1>
+    <div className="playgames-container">
+      <h1>Play Games</h1>
       <PlayGamesList setGameToPlay={setGameToPlay} />
       <button><Link to="/">Home</Link></button>
     </div>

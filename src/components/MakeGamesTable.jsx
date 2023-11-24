@@ -1,5 +1,5 @@
 import React from 'react';
-import GameRow from './MakeGamesRow';
+import MakeGameRow from './MakeGamesRow';
 
 function MakeGamesTable({ games, onPlay, onEdit, onDelete }) {
     return (
@@ -15,7 +15,7 @@ function MakeGamesTable({ games, onPlay, onEdit, onDelete }) {
                 </tr>
             </thead>
             <tbody>
-                {games.map(game => <GameRow key={game._id} game={game} onPlay={onPlay} onEdit={onEdit} onDelete={onDelete} />)}
+                {games.map(game => <MakeGameRow key={game._id} game={game} onPlay={onPlay} onEdit={onEdit} onDelete={onDelete} />)}
             </tbody>
         </table>
     )

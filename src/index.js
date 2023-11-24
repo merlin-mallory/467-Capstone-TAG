@@ -37,7 +37,7 @@ const router = createBrowserRouter(
       <Route path="game-edit602" element={<GameEdit682 />} />
       <Route path="game-edit-new" element={<GameEditNew />} />
       <Route path="play-games" element={<PlayGames />} /*element={<Scroll />} */ />
-      <Route path="play-details" element={<PlayDetails />} />
+      <Route path="games/details/:gameId" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
     </Route>
   )
