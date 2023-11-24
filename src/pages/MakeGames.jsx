@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-import UserGamesList from '../components/UserGamesList';
+import UserGamesList from '../components/MakeGamesList';
 
 function MakeGames() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -10,8 +10,8 @@ function MakeGames() {
   const [gameToPlay, setGameToPlay] = useState(null);
 
   return (
-    <div className="yourgames-container">
-      <h1>Your Games</h1>
+    <div className="makegames-container">
+      <h1>Make Games</h1>
       <UserGamesList user={user} setGameToEdit={setGameToEdit} setGameToPlay={setGameToPlay} />
       <button><Link to="/">Home</Link></button>
       <button><Link to="/create-new-game">Create Game</Link></button>

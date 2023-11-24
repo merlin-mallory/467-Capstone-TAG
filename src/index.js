@@ -12,17 +12,14 @@ import {
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Protected from './components/Protected';
 import LoginHome from './pages/LoginHome';
-import MakeGames from './pages/static/MakeGamesStatic';
 import CreateNewGame from './pages/CreateNewGame';
 import GameEdit682 from './pages/GameEdit682';
 import GameEditNew from './pages/GameEditNew';
-import Scroll from './pages/Scroll';
 import PlayDetails from './pages/PlayDetails';
-import PlayGame from './pages/PlayGame';
-import UsersGamesPage from './pages/MakeGames';
-import PublishedGamesPage from './pages/PublishedGamesPage';
+import PlayGame from './pages/static/PlayGame';
+import MakeGames from './pages/MakeGames';
+import PlayGames from './pages/PlayGames';
 
 // The original static version of MakeGames.js has been commented out below and replaced with the dynamic version.
 // The original static version of Scroll.js has been commented out below and replaced with the dynamic version.
@@ -34,17 +31,13 @@ const router = createBrowserRouter(
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
       <Route path="loginhome" element={<LoginHome />} />
-      <Route path="make-games" element={<UsersGamesPage />} /*element={<MakeGames />} *//>
+      <Route path="make-games" element={<MakeGames />} /*element={<MakeGames />} *//>
       <Route path="create-new-game" element={<CreateNewGame />} />
       <Route path="game-edit602" element={<GameEdit682 />} />
       <Route path="game-edit-new" element={<GameEditNew />} />
-      <Route path="scroll" element={<PublishedGamesPage />} /*element={<Scroll />} */ />
-      <Route path="play-details" element={<PlayDetails />} />
+      <Route path="play-games" element={<PlayGames />} /*element={<Scroll />} */ />
+      <Route path="games/details/:gameId" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
-      {/* <Route path="/" element={<Home />} > */}
-        {/* <Route path="/" index element={<Home />} /> */}
-        {/* <Route path="/" index element={<LoginHome />} /> */}
-      {/* </Route> */}
     </Route>
   )
 )

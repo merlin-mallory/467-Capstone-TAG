@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPlay, FaTrash, FaEdit } from 'react-icons/fa';
 
-function GameRow({game, onPlay, onEdit, onDelete}) {
+function MakeGamesRow({game, onPlay, onEdit, onDelete}) {
   return (
     <tr>
       <td><FaPlay onClick={() => onPlay(game)} /></td>
@@ -14,4 +14,4 @@ function GameRow({game, onPlay, onEdit, onDelete}) {
   )
 }
 
-export default GameRow;
+export default MakeGamesRow;

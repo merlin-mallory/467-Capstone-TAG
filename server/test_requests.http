@@ -72,3 +72,8 @@ Content-Type: application/json
     {
         "currentMaxGameId": 8
     }
+
+### Fetch the game details by their game_id (this is different from the _id,  which is the Object id).
+### Type in a game_id that exists in the DB after games/details/.
+### You should get a game object back that matches that game_id.
+GET http://localhost:8000/games/details/1

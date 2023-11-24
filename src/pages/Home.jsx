@@ -28,10 +28,10 @@ function Home() {
 
       <center>
       <Link to="/make-games" onClick={handleMakeGamesClick}><img src={makeGamesImg} alt="Make Games" width="20%" height="20%" /></Link>
-      <Link to="/scroll"><img src={playGamesImg} alt="Play Games" width="20%" height="20%" /></Link>
-      <br />
-      <Link to="/play-details">QR Code Demo</Link>
+      <Link to="/play-games"><img src={playGamesImg} alt="Play Games" width="20%" height="20%" /></Link>
       </center>
+      
+      <br />
 
       <footer>
         (footer content here)

@@ -87,6 +87,17 @@ const updateCurrentMaxGameId = asyncErrorHandler(async (req, res, next) => {
     return res.status(200).json({ currentMaxGameId: sitewidevars.currentMaxGameId });
 });
 
+const findGameDetails = asyncErrorHandler(async (req, res, next) => {
+    const game = await Game.findOne({ game_id: req.params.gameId });
+
+    if (!game) {
+        return next(new Error('Game not found!'));
+    }
+
+    return res.status(200).json(game);
+});
 
 
-export { createGame, findGames, findGameById, updateGameById, deleteGameById, getAllPublishedGames, getCurrentMaxGameId, updateCurrentMaxGameId };
+
+
+export { createGame, findGames, findGameById, updateGameById, deleteGameById, getAllPublishedGames, getCurrentMaxGameId, updateCurrentMaxGameId, findGameDetails };

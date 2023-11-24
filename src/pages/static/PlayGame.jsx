@@ -32,7 +32,7 @@ const PlayGame = () => {
 
       <div className="buttons">
         <button><Link to="/make-games">Your Games</Link></button>
-        <button><Link to="/scroll">Play Games</Link></button>
+        <button><Link to="/play-games">Play Games</Link></button>
         <button><Link to="/">Home</Link></button>
       </div>
     </div>

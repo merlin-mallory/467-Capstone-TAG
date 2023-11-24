@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import GamesTable from './GamesTable';
+import PlayGamesTable from './PlayGamesTable';
 
-function PublishedGamesList({setGameToPlay }) {
+function PlayGamesList({setGameToPlay }) {
     const [games, setGames] = useState([]);
     const navigate = useNavigate();
 
@@ -20,14 +20,14 @@ function PublishedGamesList({setGameToPlay }) {
     //Not working yet - a dynamic version of that page must be implemented first
     const onPlay = async (_id) => {
         setGameToPlay(_id);
-        navigate('/play-game');
+        navigate('/play-details');
     }
 
     return (
         <>
-            <GamesTable games={games} onPlay={onPlay} />
+            <PlayGamesTable games={games} onPlay={onPlay} />
         </>
     )
 }
 
-export default PublishedGamesList;
+export default PlayGamesList;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import GamesTable from './GamesTable';
+import GamesTable from './MakeGamesTable';
 
-function UserGamesList({ user, setGameToEdit, setGameToPlay }) {
+function MakeGamesList({ user, setGameToEdit, setGameToPlay }) {
     const [games, setGames] = useState([]);
     const navigate = useNavigate();
 
@@ -37,10 +37,10 @@ function UserGamesList({ user, setGameToEdit, setGameToPlay }) {
         setGameToEdit(_id);
         navigate('/edit-game');
     }
-    //Not working yet - a dynamic version of that page must be implemented first
-    const onPlay = async (_id) => {
-        setGameToPlay(_id);
-        navigate('/play-game');
+    
+    // Clicking on any given row's play button will route to that game's details page
+    const onPlay = (game) => {
+        navigate(`/games/details/${game.game_id}`);
     }
 
     return (
@@ -50,4 +50,4 @@ function UserGamesList({ user, setGameToEdit, setGameToPlay }) {
     )
 }
 
-export default UserGamesList;
+export default MakeGamesList;
