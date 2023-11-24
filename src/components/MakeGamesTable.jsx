@@ -1,7 +1,7 @@
 import React from 'react';
-import PublishedGameRow from './PublishedGameRow';
+import GameRow from './MakeGamesRow';
 
-function PublishedGamesTable({ games, onPlay}) {
+function MakeGamesTable({ games, onPlay, onEdit, onDelete }) {
     return (
         <table id='games-table'>
             <thead>
@@ -10,13 +10,15 @@ function PublishedGamesTable({ games, onPlay}) {
                     <th>Title</th>
                     <th>Date Created</th>
                     <th>Date Modified</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                {games.map(game => <GameRow key={game._id} game={game} onPlay={onPlay} />)}
+                {games.map(game => <GameRow key={game._id} game={game} onPlay={onPlay} onEdit={onEdit} onDelete={onDelete} />)}
             </tbody>
         </table>
     )
 }
 
-export default PublishedGamesTable;
+export default MakeGamesTable;

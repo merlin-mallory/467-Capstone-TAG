@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import GamesTable from './GamesTable';
+import GamesTable from './MakeGamesTable';
 
-function UserGamesList({ user, setGameToEdit, setGameToPlay }) {
+function MakeGamesList({ user, setGameToEdit, setGameToPlay }) {
     const [games, setGames] = useState([]);
     const navigate = useNavigate();
 
@@ -50,4 +50,4 @@ function UserGamesList({ user, setGameToEdit, setGameToPlay }) {
     )
 }
 
-export default UserGamesList;
+export default MakeGamesList;

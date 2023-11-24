@@ -18,11 +18,11 @@ import MakeGames from './pages/static/MakeGamesStatic';
 import CreateNewGame from './pages/CreateNewGame';
 import GameEdit682 from './pages/GameEdit682';
 import GameEditNew from './pages/GameEditNew';
-import Scroll from './pages/Scroll';
+import Scroll from './pages/static/Scroll';
 import PlayDetails from './pages/PlayDetails';
-import PlayGame from './pages/PlayGame';
+import PlayGame from './pages/static/PlayGame';
 import UsersGamesPage from './pages/MakeGames';
-import PublishedGamesPage from './pages/PublishedGamesPage';
+import PlayGames from './pages/PlayGames';
 
 // The original static version of MakeGames.js has been commented out below and replaced with the dynamic version.
 // The original static version of Scroll.js has been commented out below and replaced with the dynamic version.
@@ -38,7 +38,7 @@ const router = createBrowserRouter(
       <Route path="create-new-game" element={<CreateNewGame />} />
       <Route path="game-edit602" element={<GameEdit682 />} />
       <Route path="game-edit-new" element={<GameEditNew />} />
-      <Route path="scroll" element={<PublishedGamesPage />} /*element={<Scroll />} */ />
+      <Route path="play-games" element={<PlayGames />} /*element={<Scroll />} */ />
       <Route path="play-details" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
       {/* <Route path="/" element={<Home />} > */}

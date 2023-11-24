@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import GamesTable from './GamesTable';
+import PlayGamesTable from './PlayGamesTable';
 
-function PublishedGamesList({setGameToPlay }) {
+function PlayGamesList({setGameToPlay }) {
     const [games, setGames] = useState([]);
     const navigate = useNavigate();
 
@@ -25,9 +25,9 @@ function PublishedGamesList({setGameToPlay }) {
 
     return (
         <>
-            <GamesTable games={games} onPlay={onPlay} />
+            <PlayGamesTable games={games} onPlay={onPlay} />
         </>
     )
 }
 
-export default PublishedGamesList;
+export default PlayGamesList;

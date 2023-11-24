@@ -1,7 +1,7 @@
 import React from 'react';
-import GameRow from './GameRow';
+import PlayGamesRow from './PlayGamesRow';
 
-function GamesTable({ games, onPlay, onEdit, onDelete }) {
+function PlayGamesTable({ games, onPlay}) {
     return (
         <table id='games-table'>
             <thead>
@@ -10,15 +10,13 @@ function GamesTable({ games, onPlay, onEdit, onDelete }) {
                     <th>Title</th>
                     <th>Date Created</th>
                     <th>Date Modified</th>
-                    <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                {games.map(game => <GameRow key={game._id} game={game} onPlay={onPlay} onEdit={onEdit} onDelete={onDelete} />)}
+                {games.map(game => <PlayGamesRow key={game._id} game={game} onPlay={onPlay} />)}
             </tbody>
         </table>
     )
 }
 
-export default GamesTable;
+export default PlayGamesTable;

@@ -2,17 +2,17 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-import PublishedGamesList from '../components/PublishedGamesList';
+import PlayGamesList from '../components/PlayGamesList';
 
-function PublishedGamesPage() {
+function PlayGames() {
   const [gameToPlay, setGameToPlay] = useState(null);
 
   return (
     <div className="publishedgames-container">
       <h1>Published Games</h1>
-      <PublishedGamesList setGameToPlay={setGameToPlay} />
+      <PlayGamesList setGameToPlay={setGameToPlay} />
       <button><Link to="/">Home</Link></button>
     </div>
   )
 }
-export default PublishedGamesPage;
+export default PlayGames;

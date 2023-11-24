@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
 
-function PublishedGameRow({game, onPlay}) {
+function PlayGamesRow({game, onPlay}) {
   return (
     <tr>
       <td><FaPlay onClick={() => onPlay(game)} /></td>
@@ -12,4 +12,4 @@ function PublishedGameRow({game, onPlay}) {
   )
 }
 
-export default PublishedGameRow;
+export default PlayGamesRow;

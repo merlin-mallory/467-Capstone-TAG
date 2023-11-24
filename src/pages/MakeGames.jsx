@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-import UserGamesList from '../components/UserGamesList';
+import UserGamesList from '../components/MakeGamesList';
 
 function MakeGames() {
   const user = JSON.parse(localStorage.getItem('user'));
