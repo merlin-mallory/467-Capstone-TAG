@@ -30,9 +30,11 @@ function Home() {
      <div className ="homecenter">
       <br></br>
       <br></br>
+      <h1> Choose your Adventure! </h1>
+      <br></br>
       <center>
       <Link to="/make-games" onClick={handleMakeGamesClick}><img src={makeGamesImg} alt="Make Games" width="15%" height="15%" /></Link>
-      <br></br>
+      
       <Link to="/play-games"><img src={playGamesImg} alt="Play Games" width="15%" height="15%" /></Link>
       </center>
       </div>
