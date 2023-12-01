@@ -5,9 +5,85 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(4, 53, 75);
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+ h1 {
+  margin: auto;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Signika', sans-serif;
+  color: #f1f0f0;
+  text-shadow:
+    /* White glow */
+    0 0 7px #2e2a2a,
+    0 0 10px #141313,
+    0 0 21px #0f0f0f,
+    /* Green glow */
+    0 0 42px rgb(95, 155, 135),
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+footer {
+  color:white;
+  text-align: center;
+}
+
+homecenter {
+border: 12px;
+margin: auto;
+
+}
+
+nav {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 10px; /* Adjust this if needed */
+}
+
+.center-links {
+  text-align: center;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3399ff;
+width:500px;
+margin:0 auto;
+color: white;
+}
+img {
+  border: 5px solid rgb(6, 75, 107);
+}
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
