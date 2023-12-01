@@ -33,10 +33,15 @@ function Home() {
       <h1> Choose your Adventure! </h1>
       <br></br>
       <center>
-      <Link to="/make-games" onClick={handleMakeGamesClick}><img src={makeGamesImg} alt="Make Games" width="15%" height="15%" /></Link>
-      
-      <Link to="/play-games"><img src={playGamesImg} alt="Play Games" width="15%" height="15%" /></Link>
-      </center>
+  <Link to="/make-games" onClick={handleMakeGamesClick}>
+    <img src={makeGamesImg} alt="Make Games" style={{ marginRight: '20px' }} width="15%" height="15%" />
+  </Link>
+
+  <Link to="/play-games">
+    <img src={playGamesImg} alt="Play Games" width="15%" height="15%" />
+  </Link>
+</center>
+
       </div>
       
       <br />
