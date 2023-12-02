@@ -21,20 +21,33 @@ function Home() {
   return (
     <div className="home-container">
       <Header />
-
+<br></br>
       <div className="home-splash-container">
+      
         <img src={splash_img} alt="Splash" className="home-splash-img" />
       </div>
 
+     <div className ="homecenter">
+      <br></br>
+      <br></br>
+      <h1> Choose your Adventure! </h1>
+      <br></br>
       <center>
-      <Link to="/make-games" onClick={handleMakeGamesClick}><img src={makeGamesImg} alt="Make Games" width="20%" height="20%" /></Link>
-      <Link to="/play-games"><img src={playGamesImg} alt="Play Games" width="20%" height="20%" /></Link>
-      </center>
+  <Link to="/make-games" onClick={handleMakeGamesClick}>
+    <img src={makeGamesImg} alt="Make Games" style={{ marginRight: '20px' }} width="15%" height="15%" />
+  </Link>
+
+  <Link to="/play-games">
+    <img src={playGamesImg} alt="Play Games" width="15%" height="15%" />
+  </Link>
+</center>
+
+      </div>
       
       <br />
 
       <footer>
-        (footer content here)
+        Capstone Fall 2023 
       </footer>
     </div>
   );

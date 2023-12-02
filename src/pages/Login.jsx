@@ -26,8 +26,9 @@ const Login = () => {
     }
 
     return(
-        <div>
-            <h1>Text Adventure Game For Education Login Page</h1>
+        <div className ="center">
+            <h1 className="centered-heading">Text Adventure Game For Education Login Page</h1>
+            
             <form onSubmit={handleSubmit} className='login-form'>
                 <input
                     type ='email'

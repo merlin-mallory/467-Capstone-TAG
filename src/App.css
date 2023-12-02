@@ -1,26 +1,32 @@
 .App {
-  display: flex;
+  display: auto;
   flex-direction: column;
   align-items: left;
-  justify-content: left;
-  text-align: left;
+  justify-content: center;
+  text-align: center;
   font-size: 20px;
+  
 }
 
 .signup-form, .login-form {
-  display: flex;
+  display: auto;
   flex-direction: column;
+  margin: auto;
+  
+
 }
 
 input,
 .signup-button,
 .login-button {
   margin: 5px 0px;
+  color:black;
 }
 
 .signup-button,
 .login-button {
   cursor: pointer;
+  
 }
 
 .home-splash-container {
@@ -41,6 +47,8 @@ input,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  
   /* height: 100%;
   width: 100%;  */
 }
@@ -72,3 +80,4 @@ form td:nth-child(2) {
 .select-room, .room-name, .room-text {
   width: 100%;
 }
+
