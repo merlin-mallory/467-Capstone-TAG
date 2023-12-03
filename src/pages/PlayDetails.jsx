@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode.react';
 
 const PlayDetails = () => {
-  const { gameId } = useParams(); // Extract gameId from URL
-  const [gameDetails, setGameDetails] = useState(null); // State to store game details
+  const { gameId } = useParams();
+  const navigate = useNavigate();
+  const [gameDetails, setGameDetails] = useState(null);
 
   useEffect(() => {
-    // Fetch game details based on gameId
     fetchGameDetails(gameId).then(details => {
       setGameDetails(details);
     });
@@ -21,22 +21,22 @@ const PlayDetails = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      return data; // Assuming the response JSON directly contains the game details
+      return data;
     } catch (error) {
       console.error('Fetching game details failed:', error);
     }
   }
 
   if (!gameDetails) {
-    return <div>Loading game details...</div>; // Loading state
+    return <div>Loading game details...</div>;
   }
 
   const handlePlayThisGameClick = () => {
-    alert("Not implemented yet...")
+    navigate(`play-game/${gameId}/0`);
   }
 
   // This gets the URL for the QR code
-  const playDetailsUrl = `${window.location.origin}/games/details/${gameId}`
+  const playDetailsUrl = `text-adventure-game-for-ed.web.app/games/details/${gameId}`;
 
   return (
     <div>
@@ -67,9 +67,9 @@ const PlayDetails = () => {
 
       <div className="buttons">
         <button><Link to="/">Home</Link></button>
-        <button><Link to="/make-games">Back to Make Games</Link></button>
-        <button><Link to="/play-games">Back to Play Games</Link></button>  
-        <button onClick={handlePlayThisGameClick}>Play This Game</button>
+        <button><Link to="/make-games">Make Games</Link></button>
+        <button><Link to="/play-games">Play Games</Link></button>  
+        <button><Link to={`/play-game/${gameId}/0`}>Play This Game</Link></button>
       </div>
 
       <br />
@@ -83,10 +83,3 @@ const PlayDetails = () => {
 };
 
 export default PlayDetails;
-
-
-//       <div className="details-description">
-//         Journey back in time and join forces with some of the nation's most iconic historical figures.
-//         A darkness lurks in the Appalachian mountains. Will you swing axes with Lincoln, sling lightning with Franklin,
-//         or box with Roosevelt to defeat the mysterious threat?
-//       </div>
