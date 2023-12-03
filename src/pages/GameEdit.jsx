@@ -41,7 +41,7 @@ function GameEdit() {
          return;
       }
       try {
-         const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/${gameId}`, {
+         const response = await fetch(`https://467-capstone-tag-production.up.railway.app/${game._id}`, {
            method: 'PUT', 
            body: JSON.stringify(game),
            headers: { 'Content-Type': 'application/json' }
