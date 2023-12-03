@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 function GameEdit() {
-    const gameId = useParams();
-    const user = JSON.parse(localStorage.getItem('user'));
-    const initGame = JSON.parse(localStorage.getItem('game'));
-   const [game, setGame] = useState(initGame.game.rooms);
+   const { gameId } = useParams();
+   const [game, setGame] = useState(null);
+   const user = JSON.parse(localStorage.getItem('user'));
 
-   const handleFieldChange = (roomIndex, field, value) => {
-      setGame((prevGame) => {
-         const updatedGame = [...prevGame];
-         updatedGame[roomIndex] = {
-            ...updatedGame[roomIndex],
-            [field]: value,
-         };
-         return updatedGame;
-      });
-   };
+   useEffect(() => {
+      const fetchGame = async () => {
+         try {
+            const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/details/${gameId}`);
+            const data = await response.json();
+            setGame(data);
+            console.log("Heres editgames data:", data);
+            localStorage.setItem('game', JSON.stringify(data))
+         } catch (error) {
+            console.error('Error fetching game edit data...', error);
+         }
+      };
+
+      fetchGame();
+   }, [gameId])
 
    const addRoom = () => {
       const newRoom = {
@@ -27,7 +32,18 @@ function GameEdit() {
          Items: '',
          Exits: ''
       };
-      setGame((prevGame) => [...prevGame, newRoom]);
+      setGame(prevGame => ({
+         ...prevGame,
+         rooms: Array.isArray(prevGame.rooms) ? [...prevGame.rooms, newRoom] : [newRoom]
+      }));
+   };
+
+   const handleFieldChange = (roomIndex, field, value) => {
+      setGame(prevGame => {
+         const updatedRooms = [...prevGame.rooms];
+         updatedRooms[roomIndex] = { ...updatedRooms[roomIndex], [field]: value };
+         return { ...prevGame, rooms: updatedRooms };
+      });
    };
 
    const clearField = (roomIndex, field) => {
@@ -42,40 +58,40 @@ function GameEdit() {
    };
 
    const deleteRoom = (roomIndex) => {
-      setGame((prevGame) => prevGame.filter((_, index) => index !== roomIndex));
-   };
+      setGame(prevGame => ({
+          ...prevGame,
+          rooms: prevGame.rooms.filter((_, index) => index !== roomIndex)
+      }));
+  };
+  
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-
-
+      if (!user) {
+         alert('You must be logged in to edit a game.');
+         return;
+      }
       try {
-        const response = await fetch(`/games/${gameId.gameId}`, {
+         const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/${gameId}`, {
            method: 'PUT', 
-           body: JSON.stringify({ game: { rooms: game } }),
+           body: JSON.stringify(game),
+           headers: { 'Content-Type': 'application/json' }
         });
-
         if (!response.ok) {
            throw new Error('Failed to update data in the database');
         }
-
         console.log('Data successfully updated in the database');
-     } catch (error) {
+      } catch (error) {
         console.error(error.message);
-     }
-
-
-      if (!user) {
-        alert('You must be logged in to create a new game.');
-        return;
       }
-
-      localStorage.setItem('game', JSON.stringify({ game: { rooms: game } }));
    };
 
    
    const renderForm = () => {
-      return game.map((room, roomIndex) => (
+      console.log('Game state:', game);
+      if (!game || !game.game || !game.game.rooms) return null;
+
+      return game.game.rooms.map((room, roomIndex) => (
          <div key={roomIndex}>
             <h3>Room {roomIndex + 1}</h3>
             {Object.keys(room).map((field) => (

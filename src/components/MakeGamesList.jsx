@@ -32,10 +32,8 @@ function MakeGamesList({ user, setGameToEdit, setGameToPlay }) {
         }
     }
 
-    //Not working yet - a dynamic version of that page must be implemented first
-    const onEdit = async (_id) => {
-        setGameToEdit(_id);
-        navigate('/edit-game');
+    const onEdit = (game) => {
+        navigate(`/edit-game/${game.game_id}`);
     }
     
     // Clicking on any given row's play button will route to that game's details page

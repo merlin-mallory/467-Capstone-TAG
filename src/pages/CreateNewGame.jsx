@@ -88,7 +88,8 @@ function CreateNewGame() {
       alert('Game created successfully!');
       const data = await response.json();
       // Redirect to the game edit page or wherever needed
-      navigate(`/make-games`); // Uncomment and modify as needed
+      console.log("Here's newGame.game_id:", newGame.game_id);
+      navigate(`/edit-game/${newGame.game_id}`); // Uncomment and modify as needed
     } else {
       alert(`Failed to create game. Status code = ${response.status}`);
     }
