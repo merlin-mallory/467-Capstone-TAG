@@ -12,6 +12,8 @@ function MakeGames() {
   return (
     <div className="makegames-container">
       <h1>Make Games</h1>
+      <br></br>
+      <br></br>
       <UserGamesList user={user} setGameToEdit={setGameToEdit} setGameToPlay={setGameToPlay} />
       <button><Link to="/">Home</Link></button>
       <button><Link to="/create-new-game">Create Game</Link></button>
