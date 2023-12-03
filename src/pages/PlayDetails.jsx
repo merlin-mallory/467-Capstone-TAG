@@ -36,7 +36,7 @@ const PlayDetails = () => {
   }
 
   // This gets the URL for the QR code
-  const playDetailsUrl = `text-adventure-game-for-ed.web.app/games/details/${gameId}`;
+  const playDetailsUrl = `https://text-adventure-game-for-ed.web.app/games/details/${gameId}`;
 
   return (
     <div>
