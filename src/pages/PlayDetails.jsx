@@ -42,6 +42,7 @@ const PlayDetails = () => {
     <div>
       <div className="details-stats">
         <h1>{gameDetails.title} (#{gameDetails.game_id})</h1>
+        <br></br>
         <table>
           <tbody>
             <tr>
