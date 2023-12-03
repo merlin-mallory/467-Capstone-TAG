@@ -36,7 +36,7 @@ const PlayDetails = () => {
   }
 
   // This gets the URL for the QR code
-  const playDetailsUrl = `text-adventure-game-for-ed.web.app/games/details/${gameId}`;
+  const playDetailsUrl = `https://text-adventure-game-for-ed.web.app/games/details/${gameId}`;
 
   return (
     <div>
@@ -66,7 +66,7 @@ const PlayDetails = () => {
       <br />
 
       <div className="buttons">
-        <button><Link to="/">Home</Link></button>
+        <button><Link to="/">HomeBBB</Link></button>
         <button><Link to="/make-games">Make Games</Link></button>
         <button><Link to="/play-games">Play Games</Link></button>  
         <button><Link to={`/play-game/${gameId}/0`}>Play This Game</Link></button>
