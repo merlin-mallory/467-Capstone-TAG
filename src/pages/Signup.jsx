@@ -28,6 +28,7 @@ const Signup = () => {
     return(
         <div>
             <h1>Text Adventure Game For Education Signup Page</h1>
+            <br></br>
             <form onSubmit={handleSubmit} className='signup-form'>
                 <input
                     type ='email'
