@@ -8,7 +8,7 @@ function MakeGamesList({ user, setGameToEdit, setGameToPlay }) {
     const navigate = useNavigate();
 
     const getMyGames = async () => {
-        const response = await fetch(`/games?author_id=${user.uid}`);
+        const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games?author_id=${user.uid}`);
         const data = await response.json();
         setGames(data);
     }
@@ -18,7 +18,7 @@ function MakeGamesList({ user, setGameToEdit, setGameToPlay }) {
     }, []);
 
     const onDelete = async (_id) => {
-        const response = await fetch(`/games/${_id}`, {
+        const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/${_id}`, {
             method: 'DELETE',
         });
 

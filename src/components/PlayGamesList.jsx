@@ -8,7 +8,7 @@ function PlayGamesList({setGameToPlay }) {
     const navigate = useNavigate();
 
     const getPublishedGames = async () => {
-        const response = await fetch(`/games?is_published=true`);
+        const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games?is_published=true`);
         const data = await response.json();
         setGames(data);
     }

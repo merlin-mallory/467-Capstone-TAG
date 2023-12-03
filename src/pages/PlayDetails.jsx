@@ -16,7 +16,7 @@ const PlayDetails = () => {
 
   async function fetchGameDetails(id) {
     try {
-      const response = await fetch(`/games/details/${id}`);
+      const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/details/${id}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
