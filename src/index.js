@@ -21,6 +21,7 @@ import PlayGame from './pages/static/PlayGame';
 import MakeGames from './pages/MakeGames';
 import PlayGames from './pages/PlayGames';
 import GameEdit from './pages/GameEdit';
+import EditThisRoom from './pages/EditThisRoom';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       <Route path="games/details/:gameId" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
       <Route path="edit-game/:gameId" element={<GameEdit />} />
+      <Route path="edit-game/:gameId/:roomIndex" element={<EditThisRoom />} />
     </Route>
   )
 )
