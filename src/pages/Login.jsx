@@ -1,11 +1,15 @@
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import React from 'react'
+import React, { useState } from 'react';
 import { auth } from '../firebase'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import splashImg from '../img/splash_img.png'; // Adjust the path based on the location of your image
+
+
 
 const Login = () => {
-
+   
+    const [blurBackground, setBlurBackground] = useState(false);
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
 
@@ -25,10 +29,23 @@ const Login = () => {
         }
     }
 
+    const containerStyle = {
+        backgroundImage: `url(${splashImg})`,
+        backgroundSize: 'cover',
+        width: '100vw',
+        height: '100vh',
+        filter: blurBackground ? 'blur(30px)' : 'none' // Apply blur if blurBackground is true
+    };
+
     return(
-        <div className ="center">
+       
+        <div className="center login-container" style={containerStyle}>
+            
+        
+        
             <h1 className="centered-heading">Text Adventure Game For Education Login Page</h1>
             <br></br>
+            
             <form onSubmit={handleSubmit} className='login-form'>
                 <input
                     type ='email'
@@ -45,8 +62,9 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type='submit' classname='login-button'>Login</button>
+                <p>Need to Login? <Link to='/signup'>Create Account</Link></p>
             </form>
-            <p>Need to Login? <Link to='/signup'>Create Account</Link></p>
+            
         </div>
     )
 }
