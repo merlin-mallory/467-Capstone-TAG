@@ -16,6 +16,8 @@ function MakeGames() {
 function Table() {
   return(
     <div>
+      <br></br>
+      <br></br>
       <table>
         <thead>
           <tr>
