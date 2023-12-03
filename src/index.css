@@ -70,7 +70,7 @@ img {
   border: 5px solid rgb(6, 75, 107);
 }
 a:link {
-  color: red;
+  color: rgb(171, 6, 67);
 }
 
 /* visited link */
@@ -86,4 +86,35 @@ a:hover {
 /* selected link */
 a:active {
   color: blue;
+}
+
+.new-game-name {
+  color: white;
+}
+
+thead {
+  color: white;
+  margin: auto;
+}
+
+tbody {
+  color: rgb(234, 224, 224);
+}
+
+.details-description {
+  color: white;
+}
+
+button {
+  background-color: rgb(3, 48, 63);
+  border: 10px;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
