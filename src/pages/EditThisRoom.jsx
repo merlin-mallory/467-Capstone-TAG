@@ -30,7 +30,7 @@ function EditThisRoom() {
     
         const updatedGame = { ...game };
     
-        const updateResponse = await fetch(`https://467-capstone-tag-production.up.railway.app/games/${gameId}`, {
+        const updateResponse = await fetch(`https://467-capstone-tag-production.up.railway.app/${gameId}`, {
             method: 'PUT',
             body: JSON.stringify(updatedGame),
             headers: { 'Content-Type': 'application/json' }
@@ -51,7 +51,7 @@ function EditThisRoom() {
         });
     };
 
-    if (!room) return <div>Loading...</div>;
+    if (!game) return <div>Loading...</div>;
 
     const currentRoom = game.game.rooms[roomIndex];
 
