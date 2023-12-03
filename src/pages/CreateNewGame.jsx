@@ -99,6 +99,7 @@ function CreateNewGame() {
   return (
     <div>
       <h1>Create a New Game</h1>
+      <br></br>
       <form>
         <table>
           <tbody>
