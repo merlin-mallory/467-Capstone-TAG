@@ -10,6 +10,8 @@ function PlayGames() {
   return (
     <div className="playgames-container">
       <h1>Play Games</h1>
+      <br></br>
+      <br></br>
       <PlayGamesList setGameToPlay={setGameToPlay} />
       <button><Link to="/">Home</Link></button>
     </div>
