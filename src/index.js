@@ -20,9 +20,8 @@ import PlayDetails from './pages/PlayDetails';
 import PlayGame from './pages/static/PlayGame';
 import MakeGames from './pages/MakeGames';
 import PlayGames from './pages/PlayGames';
-
-// The original static version of MakeGames.js has been commented out below and replaced with the dynamic version.
-// The original static version of Scroll.js has been commented out below and replaced with the dynamic version.
+import GameEdit from './pages/GameEdit';
+import EditThisRoom from './pages/EditThisRoom';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,13 +30,15 @@ const router = createBrowserRouter(
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
       <Route path="loginhome" element={<LoginHome />} />
-      <Route path="make-games" element={<MakeGames />} /*element={<MakeGames />} *//>
+      <Route path="make-games" element={<MakeGames />} />
       <Route path="create-new-game" element={<CreateNewGame />} />
       <Route path="game-edit602" element={<GameEdit682 />} />
       <Route path="game-edit-new" element={<GameEditNew />} />
-      <Route path="play-games" element={<PlayGames />} /*element={<Scroll />} */ />
+      <Route path="play-games" element={<PlayGames />} />
       <Route path="games/details/:gameId" element={<PlayDetails />} />
       <Route path="play-game" element={<PlayGame />} />
+      <Route path="edit-game/:gameId" element={<GameEdit />} />
+      <Route path="edit-game/:gameId/:roomIndex" element={<EditThisRoom />} />
     </Route>
   )
 )
