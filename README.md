@@ -85,7 +85,7 @@
 
 <div align="center">
   <a href="https://github.com/merlin-mallory/467-capstone-tag">
-    <a href="https://text-adventure-game-for-ed.web.app/"><img src="src/img/Screenshot 2023-11-21.png" alt="Logo"></a>
+    <a href="https://text-adventure-game-for-ed.web.app/"><img src="src/img/Screenshot 2023-12-05.png" alt="Logo"></a>
   </a>
 </div>
 
