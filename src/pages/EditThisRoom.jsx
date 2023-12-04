@@ -30,8 +30,8 @@ function EditThisRoom() {
     
         const updatedGame = { ...game };
     
-        const updateResponse = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/${gameId}`, {
-            method: 'PUT',
+        const updateResponse = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/games/${game._id}`, {
+            method: 'PATCH',
             body: JSON.stringify(updatedGame),
             headers: { 'Content-Type': 'application/json' }
         });
