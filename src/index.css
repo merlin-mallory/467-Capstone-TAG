@@ -181,3 +181,11 @@ button {
   height: 20vh; 
   
 }
+
+.createnewgame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; 
+}
+
