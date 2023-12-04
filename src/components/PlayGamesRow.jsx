@@ -13,8 +13,8 @@ function PlayGamesRow({game, onPlay}) {
     <tr>
       <td><FaPlay onClick={handlePlayClick} /></td>
       <td>{game.title} (#{game.game_id})</td>
-      <td>{game.created_at.substr(0,9)}</td>
-      <td>{game.updated_at.substr(0,9)}</td>
+      <td>{game.created_at.substr(0,10)}</td>
+      <td>{game.updated_at.substr(0,10)}</td>
     </tr>
   )
 }

@@ -6,8 +6,8 @@ function MakeGamesRow({game, onPlay, onEdit, onDelete}) {
     <tr>
       <td><FaPlay onClick={() => onPlay(game)} /></td>
       <td>{game.title} (#{game.game_id})</td>
-      <td>{game.created_at.substr(0,9)}</td>
-      <td>{game.updated_at.substr(0,9)}</td>
+      <td>{game.created_at.substr(0,10)}</td>
+      <td>{game.updated_at.substr(0,10)}</td>
       <td><FaEdit onClick={() => onEdit(game)} /></td>
       <td><FaTrash onClick={() => onDelete(game._id)} /></td>
     </tr>
