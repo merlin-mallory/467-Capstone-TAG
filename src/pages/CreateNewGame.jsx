@@ -102,7 +102,7 @@ function CreateNewGame() {
       <h1>Create a New Game</h1>
       <br></br>
       <form>
-        <table>
+        <table class ="createnewgame">
           <tbody>
             <tr>
               <td>
