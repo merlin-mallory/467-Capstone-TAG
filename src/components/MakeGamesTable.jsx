@@ -3,6 +3,7 @@ import MakeGameRow from './MakeGamesRow';
 
 function MakeGamesTable({ games, onPlay, onEdit, onDelete }) {
     return (
+    <div className="table-container1">
         <table id='games-table'>
             <thead>
                 <tr>
@@ -18,6 +19,7 @@ function MakeGamesTable({ games, onPlay, onEdit, onDelete }) {
                 {games.map(game => <MakeGameRow key={game._id} game={game} onPlay={onPlay} onEdit={onEdit} onDelete={onDelete} />)}
             </tbody>
         </table>
+    </div>
     )
 }
 

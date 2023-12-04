@@ -56,16 +56,7 @@ nav {
   text-align: center;
 }
 
-.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #3399ff;
-width:500px;
-margin:0 auto;
-color: white;
-}
+
 img {
   border: 5px solid rgb(6, 75, 107);
 }
@@ -167,3 +158,34 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.login {
+  padding: 20px;
+}
+
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+  
+}
+
+
+.table-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; 
+  
+}
+
+.createnewgame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; 
+}
+
