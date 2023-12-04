@@ -16,7 +16,7 @@ function CreateNewGame() {
   const allocateGameId = async () => {
     try {
       // Get the current max game ID
-      const currentIdResponse = await fetch('https://467-capstone-tag-production.up.railway.app/games/currentMaxGameId');
+      const currentIdResponse = await fetch('https://467-capstone-tag-production-bd6a.up.railway.app/games/currentMaxGameId');
       if (!currentIdResponse.ok) {
         throw new Error('Failed to fetch currentMaxGameId');
       }
@@ -29,7 +29,7 @@ function CreateNewGame() {
       // console.log("Heres the currentMaxGameId:", currentMaxGameId);
   
       // Update the current max game ID
-      const patchResponse = await fetch('https://467-capstone-tag-production.up.railway.app/games/currentMaxGameId', {
+      const patchResponse = await fetch('https://467-capstone-tag-production-bd6a.up.railway.app/games/currentMaxGameId', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ function CreateNewGame() {
     };
   
     // Making the POST request to create a new game
-    const response = await fetch('https://467-capstone-tag-production.up.railway.app/games', {
+    const response = await fetch('https://467-capstone-tag-production-bd6a.up.railway.app/games', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
