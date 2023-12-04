@@ -24,18 +24,36 @@ function PlayThisGame() {
 
   const currentRoom = game.game.rooms[roomIndex];
 
+  const handleExitClick = (nextRoomIndex) => {
+    navigate(`/play-game/${gameId}/${nextRoomIndex}`);
+  };
+
   return (
     <div>
       <h1>{game.title} (#{game.game_id})</h1>
       <p>Room #{roomIndex}</p>
       <p>{currentRoom.name}</p>
       <p>{currentRoom.description}</p>
-      <p>Exits: {currentRoom.Exits}</p>
-      <button onClick={() => navigate(`/home`)}>Home</button>
-      <button onClick={() => navigate(`/games/details/${gameId}`)}>Game Details</button>
-      <button onClick={() => navigate(`/play-games`)}>Play Games</button>
+      <br />
+      <div>
+        {currentRoom.exits.length > 0 ? (
+          currentRoom.exits.map((exit, index) => (
+            <React.Fragment key={index}>
+              <button onClick={() => handleExitClick(exit[1])}>
+                {exit[0]}
+              </button>
+              <br />
+            </React.Fragment>
+          ))
+        ) : (
+          <p>No player choices currently available...</p>
+        )}
+      </div>
+      <br />
+      <button onClick={() => navigate(`/`)}>Home</button>
       <button onClick={() => navigate(`/make-games`)}>Make Games</button>
-      
+      <button onClick={() => navigate(`/play-games`)}>Play Games</button>
+      <button onClick={() => navigate(`/games/details/${gameId}`)}>Game Details</button>
     </div>
   );
 }

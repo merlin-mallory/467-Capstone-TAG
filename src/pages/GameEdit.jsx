@@ -32,6 +32,22 @@ function GameEdit() {
    const handleGameDescriptionChange = (e) => {
       setGame({ ...game, description: e.target.value });
    };   
+
+   const saveGame = async () => {
+      try {
+         const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/games/${game._id}`, {
+           method: 'PATCH', 
+           body: JSON.stringify(game),
+           headers: { 'Content-Type': 'application/json' }
+         });
+         if (!response.ok) {
+            throw new Error('Failed to update data in the database');
+         }
+         console.log('Data successfully updated in the database');
+      } catch (error) {
+         console.error(error.message);
+      }
+   };
    
 
    const handleSubmit = async (e) => {
@@ -40,19 +56,7 @@ function GameEdit() {
          alert('You must be logged in to edit a game.');
          return;
       }
-      try {
-         const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/${game._id}`, {
-           method: 'PUT', 
-           body: JSON.stringify(game),
-           headers: { 'Content-Type': 'application/json' }
-        });
-        if (!response.ok) {
-           throw new Error('Failed to update data in the database');
-        }
-        console.log('Data successfully updated in the database');
-      } catch (error) {
-        console.error(error.message);
-      }
+      await saveGame();
    };
 
    const renderRoomButtons = () => {
@@ -65,13 +69,13 @@ function GameEdit() {
       ));
    };
 
-   const addRoom = () => {
+   const addRoom = async () => {
       const newRoom = {
          name: 'New Room',
          description: 'None provided - This is a description of the room.',
          first_visit: 'This is a description that is displayed the first time the player enters the room.',
-         Items: '',
-         Exits: ''
+         items: [],
+         exits: []
       };
       setGame(prevGame => ({
           ...prevGame,
@@ -80,7 +84,8 @@ function GameEdit() {
               rooms: [...prevGame.game.rooms, newRoom]
           }
       }));
-  };
+      await saveGame();  // Save game after adding the new room
+   };
    
 
    return (
