@@ -66,7 +66,7 @@ const PlayDetails = () => {
       <br />
 
       <div className="buttons">
-        <button><Link to="/">Home</Link></button>
+        <button><Link to="/">HomeAAA</Link></button>
         <button><Link to="/make-games">Make Games</Link></button>
         <button><Link to="/play-games">Play Games</Link></button>  
         <button><Link to={`/play-game/${gameId}/0`}>Play This Game</Link></button>
