@@ -179,7 +179,7 @@ From the user’s perspective, our project will allow users to build their own t
 
 6. Wait a few minutes (and possible refresh your cache), and then visit https://text-adventure-game-for-ed.web.app/ to see if your changes successfully deployed.
 
-### Installing and Running Backend Prod
+### Installing and Deploying Backend Prod
 
 We are currently using Railways to deploy all of the files under /server. Any change mades to the master branch of this repo will automatically trigger a rebuild and redeploy to the following domain: https://467-capstone-tag-production-bd6a.up.railway.app . Please contact the repo admin if you wish to see the Railway access credentials.
 
