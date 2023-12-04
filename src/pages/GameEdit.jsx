@@ -12,7 +12,7 @@ function GameEdit() {
    useEffect(() => {
       const fetchGame = async () => {
          try {
-            const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/details/${gameId}`);
+            const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/games/details/${gameId}`);
             const data = await response.json();
             setGame(data);
             console.log("Heres editgames data:", data);
@@ -41,7 +41,7 @@ function GameEdit() {
          return;
       }
       try {
-         const response = await fetch(`https://467-capstone-tag-production.up.railway.app/${game._id}`, {
+         const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/${game._id}`, {
            method: 'PUT', 
            body: JSON.stringify(game),
            headers: { 'Content-Type': 'application/json' }

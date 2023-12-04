@@ -16,7 +16,7 @@ const PlayDetails = () => {
 
   async function fetchGameDetails(id) {
     try {
-      const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/details/${id}`);
+      const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/games/details/${id}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -36,7 +36,7 @@ const PlayDetails = () => {
   }
 
   // This gets the URL for the QR code
-  const playDetailsUrl = `https://text-adventure-game-for-ed.web.app/games/details/${gameId}`;
+  const playDetailsUrl = `https://467-capstone-tag-production-bd6a.up.railway.app/games/details/${gameId}`;
 
   return (
     <div>

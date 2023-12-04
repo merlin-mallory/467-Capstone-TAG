@@ -9,7 +9,7 @@ function PlayThisGame() {
   useEffect(() => {
     const fetchGame = async () => {
       try {
-        const response = await fetch(`https://467-capstone-tag-production.up.railway.app/games/details/${gameId}`);
+        const response = await fetch(`https://467-capstone-tag-production-bd6a.up.railway.app/games/details/${gameId}`);
         const data = await response.json();
         setGame(data);
       } catch (error) {
