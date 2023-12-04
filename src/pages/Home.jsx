@@ -21,6 +21,10 @@ function Home() {
   return (
     <div className="home-container">
       <Header />
+
+
+<br></br>
+<br></br>
 <br></br>
       <div className="home-splash-container">
       
