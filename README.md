@@ -136,6 +136,8 @@ From the user’s perspective, our project will allow users to build their own t
 
 ### Installing and Running Backend Dev
 
+(Note that Backend Dev is temporarily unavailable because we searched to Railways for production)
+
 1. Open a new instance of the terminal, and navigate to the /server directory.
 
 2. Create ".env" file in the server directory, and paste in the .env code from "Firebase.js Credentials" Doc on Google Drive.
@@ -174,6 +176,12 @@ From the user’s perspective, our project will allow users to build their own t
   ```sh
   firebase deploy --only hosting
   ```
+
+6. Wait a few minutes (and possible refresh your cache), and then visit https://text-adventure-game-for-ed.web.app/ to see if your changes successfully deployed.
+
+### Installing and Running Backend Prod
+
+We are currently using Railways to deploy all of the files under /server. Any change mades to the master branch of this repo will automatically trigger a rebuild and redeploy to the following domain: https://467-capstone-tag-production-bd6a.up.railway.app . Please contact the repo admin if you wish to see the Railway access credentials.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
