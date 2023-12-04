@@ -51,7 +51,8 @@ function Home() {
       <br />
 
       <footer>
-        Capstone Fall 2023 
+      CS 467 Capstone project for Oregon State University<br /><br />
+      Created by Merlin Mallory, Alison Haas, Carolina Rodriguez, Michael Wyatt, and Mickey McDonell
       </footer>
     </div>
   );
