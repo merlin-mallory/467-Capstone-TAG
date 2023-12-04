@@ -138,7 +138,7 @@ From the user’s perspective, our project will allow users to build their own t
 
 (Note that Backend Dev is temporarily unavailable because we searched to Railways for production)
 
-1. Open a new instance of the terminal, and navigate to the /server directory.
+1. Open a new instance of the terminal, and navigate to the /server directory of Frontend Dev.
 
 2. Create ".env" file in the server directory, and paste in the .env code from "Firebase.js Credentials" Doc on Google Drive.
 
