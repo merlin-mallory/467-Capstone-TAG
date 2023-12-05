@@ -96,7 +96,7 @@ https://youtu.be/y4I6kMo5EY0?si=3SjrrI3hiinxta2o
 </div>
 
 <h2>Introduction</h2> 
-This project will create a web platform for students and teachers to make and play text adventure games. Users will be able to log in so that they can create a new game or edit one they previously created. Users will be able to publish their games onto a web server so it can be played by the public. 
+This project is a live web platform for students and teachers to make and play text adventure games. Users will be able to log in so that they can create a new game or edit one they previously created. Users will be able to publish their games onto a web server so it can be played by the public. 
 
 <h2>User’s Perspective</h2>
 From the user’s perspective, our project will allow users to build their own text adventure game that will gamify learning for students. They will be able to customize the game for the subject and topic they are teaching. From the student’s perspective, they will be able to select a game and use text prompts to navigate through the game.  
