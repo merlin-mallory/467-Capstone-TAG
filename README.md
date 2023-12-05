@@ -98,6 +98,9 @@ From the user’s perspective, our project will allow users to build their own t
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Use Case Demo Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y4I6kMo5EY0?si=hFHQEJ-JaWnmEXPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 ### Built With
