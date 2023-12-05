@@ -37,7 +37,7 @@
 <h3 align="center">Text Adventure Game For Education</h3>
 
   <p align="center">
-    Our project is to build a web app that will enable users to create and play text-based games, for educational purposes. 
+    A live web platform for students and teachers to make and play text adventure games
     <br />
     <a href="https://github.com/merlin-mallory/467-capstone-tag"><strong>Explore the docs »</strong></a>
     <br />
