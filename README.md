@@ -248,7 +248,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Email Address for Feedback - textadventuregamefeedback@gmail.com
 
 Project Link: [https://github.com/merlin-mallory/467-capstone-tag](https://github.com/merlin-mallory/467-capstone-tag)
 
