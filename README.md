@@ -81,7 +81,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Home Page Screenshot
+## Visit the Live Web App
 
 <div align="center">
   <a href="https://github.com/merlin-mallory/467-capstone-tag">
@@ -89,10 +89,10 @@
   </a>
 </div>
 
-## Use Case Demo Video
+## Watch the Use Case Demo
 https://youtu.be/y4I6kMo5EY0?si=3SjrrI3hiinxta2o
 <div align="center">
-  <a href="https://youtu.be/y4I6kMo5EY0?si=Cshs-ZTor2_A3Vpe"><img src="src/img/Screenshot 2023-12-05-1.png"></a>
+  <a href="https://youtu.be/y4I6kMo5EY0?si=Cshs-ZTor2_A3Vpe"><img src="src/img/Screenshot 2023-12-05-1.png" height="20%" width = "20%"></a>
 </div>
 
 <h2>Introduction</h2> 
