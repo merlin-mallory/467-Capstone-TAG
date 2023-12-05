@@ -89,6 +89,12 @@
   </a>
 </div>
 
+## Use Case Demo Video
+https://youtu.be/y4I6kMo5EY0?si=3SjrrI3hiinxta2o
+<div align="center">
+  <a href="https://youtu.be/y4I6kMo5EY0?si=Cshs-ZTor2_A3Vpe"><img src="src/img/Screenshot 2023-12-05-1.png"></a>
+</div>
+
 <h2>Introduction</h2> 
 This project will create a web platform for students and teachers to make and play text adventure games. Users will be able to log in so that they can create a new game or edit one they previously created. Users will be able to publish their games onto a web server so it can be played by the public. 
 
@@ -97,9 +103,6 @@ From the user’s perspective, our project will allow users to build their own t
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Use Case Demo Video
-https://youtu.be/y4I6kMo5EY0?si=3SjrrI3hiinxta2o
 
 
 
