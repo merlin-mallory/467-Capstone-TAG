@@ -89,7 +89,7 @@ https://text-adventure-game-for-ed.web.app/
   </a>
 </div>
 
-## Watch the Use Case Demo
+## Watch the Use Case Demo Video
 https://youtu.be/y4I6kMo5EY0?si=3SjrrI3hiinxta2o
 <div align="center">
   <a href="https://youtu.be/y4I6kMo5EY0?si=Cshs-ZTor2_A3Vpe"><img src="src/img/Screenshot 2023-12-05-1.png" height="20%" width = "20%"></a>
